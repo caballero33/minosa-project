@@ -1,12 +1,130 @@
-.App {
-  text-align: center;
-  padding: 2rem;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App h1 {
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+.app-layout {
+  display: flex;
+  flex: 1;
+  margin-top: 100px; /* Account for fixed header */
+  min-height: calc(100vh - 100px);
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.main-content {
+  flex: 1;
+  margin-left: 200px; /* Account for fixed sidebar */
+  min-height: calc(100vh - 100px);
+  background: #f8f9fa;
+  overflow-x: auto;
+  overflow-y: auto;
+  position: relative;
+  z-index: 1;
+  padding: 0;
+}
+
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: none;
+}
+
+.module-placeholder {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: white;
+  margin: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.module-placeholder h2 {
+  color: #1a365d;
+  font-size: 2rem;
   margin-bottom: 1rem;
 }
 
-.App p {
-  color: #666;
+.module-placeholder p {
+  color: #6c757d;
+  font-size: 1.1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .main-content {
+    margin-left: 180px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .app-layout {
+    margin-top: 100px;
+  }
+  
+  .main-content {
+    margin-left: 160px;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-layout {
+    margin-top: 70px;
+  }
+  
+  .main-content {
+    margin-left: 0;
+    padding: 0;
+  }
+  
+  .sidebar-overlay {
+    display: block;
+  }
+  
+  .module-placeholder {
+    margin: 1rem;
+    padding: 2rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-layout {
+    margin-top: 60px;
+  }
+  
+  .main-content {
+    margin-left: 0;
+    padding: 0;
+  }
+  
+  .module-placeholder {
+    margin: 0.5rem;
+    padding: 1.5rem 0.8rem;
+  }
 }

@@ -1,0 +1,536 @@
+.laboratorio {
+  padding: 0;
+  background: #f8f9fa;
+  min-height: 100vh;
+  color: #1a365d;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.laboratorio-header {
+  background: linear-gradient(135deg, #1a365d 0%, #2c5aa0 100%);
+  color: white;
+  padding: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.header-title h1 {
+  font-size: 2rem;
+  margin: 0;
+  font-weight: 600;
+}
+
+.header-content p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.laboratorio-content {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.controls-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.lote-selector {
+  display: flex;
+  gap: 1rem;
+}
+
+.lote-tab {
+  background: rgba(26, 54, 93, 0.1);
+  border: 1px solid rgba(26, 54, 93, 0.2);
+  color: #1a365d;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.lote-tab:hover {
+  background: rgba(26, 54, 93, 0.2);
+}
+
+.lote-tab.active {
+  background: #ff7f50;
+  border-color: #ff7f50;
+  color: white;
+}
+
+.filters-section {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.search-box, .filter-box {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: white;
+  border: 1px solid #e1e8ed;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-box input, .filter-box select {
+  border: none;
+  outline: none;
+  font-size: 0.9rem;
+  color: #1a365d;
+  background: transparent;
+  min-width: 200px;
+}
+
+.filter-box select {
+  min-width: 150px;
+}
+
+.export-btn {
+  background: #1a365d;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.export-btn:hover {
+  background: #2c5aa0;
+  transform: translateY(-1px);
+}
+
+.minerales-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.mineral-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e1e8ed;
+  transition: all 0.3s ease;
+}
+
+.mineral-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.mineral-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.mineral-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.mineral-info {
+  flex: 1;
+}
+
+.mineral-info h3 {
+  margin: 0 0 0.3rem 0;
+  color: #1a365d;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.mineral-id {
+  color: #6b7280;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.estado-badge {
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+}
+
+.mineral-details {
+  margin-bottom: 1.5rem;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+}
+
+.label {
+  color: #6b7280;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.value {
+  color: #1a365d;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.pureza {
+  color: #10b981;
+}
+
+.trend-icon {
+  color: #10b981;
+}
+
+.mineral-actions {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.action-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.action-btn.primary {
+  background: #ff7f50;
+  color: white;
+}
+
+.action-btn.primary:hover {
+  background: #ff6347;
+  transform: translateY(-1px);
+}
+
+.action-btn.secondary {
+  background: #1a365d;
+  color: white;
+}
+
+.action-btn.secondary:hover {
+  background: #2c5aa0;
+  transform: translateY(-1px);
+}
+
+.no-results {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #6b7280;
+}
+
+.no-results h3 {
+  margin: 1rem 0 0.5rem 0;
+  color: #1a365d;
+}
+
+.laboratorio-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e1e8ed;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.stat-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #ff7f50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.stat-content h3 {
+  margin: 0 0 0.5rem 0;
+  color: #6b7280;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.stat-number {
+  color: #1a365d;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .laboratorio-header {
+    padding: 1.5rem;
+  }
+  
+  .laboratorio-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .laboratorio-content {
+    padding: 1.5rem;
+  }
+  
+  .minerales-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .laboratorio-stats {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 1024px) {
+  .laboratorio-header {
+    padding: 1rem;
+  }
+  
+  .laboratorio-header h1 {
+    font-size: 1.6rem;
+  }
+  
+  .laboratorio-content {
+    padding: 1rem;
+  }
+  
+  .controls-section {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .filters-section {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  
+  .minerales-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.2rem;
+  }
+  
+  .laboratorio-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .laboratorio {
+    padding: 0;
+  }
+  
+  .laboratorio-header {
+    padding: 1rem;
+  }
+  
+  .laboratorio-header h1 {
+    font-size: 1.4rem;
+  }
+  
+  .laboratorio-header p {
+    font-size: 0.9rem;
+  }
+  
+  .laboratorio-content {
+    padding: 1rem;
+  }
+  
+  .controls-section {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .filters-section {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+  
+  .lote-selector {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .lote-tab {
+    padding: 0.8rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .minerales-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .mineral-card {
+    padding: 1rem;
+  }
+  
+  .mineral-header h3 {
+    font-size: 1.1rem;
+  }
+  
+  .mineral-actions {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .action-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .laboratorio-stats {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+    margin-top: 1.5rem;
+  }
+  
+  .stat-card {
+    padding: 1rem;
+  }
+  
+  .stat-content h3 {
+    font-size: 0.9rem;
+  }
+  
+  .stat-number {
+    font-size: 1.5rem;
+  }
+
+  .search-box input, .filter-box select {
+    min-width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .laboratorio-header {
+    padding: 0.8rem;
+  }
+  
+  .laboratorio-header h1 {
+    font-size: 1.2rem;
+  }
+  
+  .laboratorio-header p {
+    font-size: 0.8rem;
+  }
+  
+  .laboratorio-content {
+    padding: 0.8rem;
+  }
+  
+  .lote-tab {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.8rem;
+  }
+  
+  .search-box input, .filter-box select {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+    min-width: 120px;
+  }
+  
+  .mineral-card {
+    padding: 0.8rem;
+  }
+  
+  .mineral-header h3 {
+    font-size: 1rem;
+  }
+  
+  .mineral-id {
+    font-size: 0.8rem;
+  }
+  
+  .detail-row {
+    font-size: 0.85rem;
+  }
+  
+  .action-btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.8rem;
+  }
+  
+  .stat-card {
+    padding: 0.8rem;
+  }
+  
+  .stat-content h3 {
+    font-size: 0.8rem;
+  }
+  
+  .stat-number {
+    font-size: 1.3rem;
+  }
+}

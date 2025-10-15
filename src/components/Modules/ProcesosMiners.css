@@ -1,0 +1,273 @@
+.procesos-miners {
+  padding: 2rem;
+  background: #f8f9fa;
+  min-height: 100vh;
+}
+
+.module-header {
+  margin-bottom: 2rem;
+}
+
+.module-header h1 {
+  color: #1a365d;
+  font-size: 2.5rem;
+  margin: 0 0 0.5rem 0;
+  font-weight: 700;
+}
+
+.module-header p {
+  color: #6c757d;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.tab {
+  background: none;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #6c757d;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.tab:hover {
+  color: #1a365d;
+  background: #f8f9fa;
+}
+
+.tab.active {
+  color: #1a365d;
+  border-bottom-color: #1a365d;
+  background: white;
+}
+
+.process-content {
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.process-info {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.process-info h2 {
+  color: #1a365d;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.8rem;
+}
+
+.process-info p {
+  color: #6c757d;
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.process-steps {
+  margin-bottom: 2rem;
+}
+
+.process-steps h3 {
+  color: #1a365d;
+  margin: 0 0 1.5rem 0;
+  font-size: 1.3rem;
+}
+
+.steps-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  background: #f8f9fa;
+  transition: all 0.3s ease;
+}
+
+.step:hover {
+  background: #e3f2fd;
+  border-color: #2196f3;
+}
+
+.step.completed {
+  border-left: 4px solid #28a745;
+}
+
+.step.in-progress {
+  border-left: 4px solid #ffc107;
+}
+
+.step.pending {
+  border-left: 4px solid #6c757d;
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  background: #1a365d;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.step-content {
+  flex: 1;
+}
+
+.step-content h4 {
+  margin: 0 0 0.5rem 0;
+  color: #1a365d;
+  font-size: 1.1rem;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #e9ecef;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #28a745 0%, #20c997 100%);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  font-size: 0.9rem;
+  color: #6c757d;
+  font-weight: 600;
+}
+
+.step-status {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.equipment-section h3 {
+  color: #1a365d;
+  margin: 0 0 1.5rem 0;
+  font-size: 1.3rem;
+}
+
+.equipment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.equipment-card {
+  padding: 1.5rem;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  background: #f8f9fa;
+  transition: all 0.3s ease;
+}
+
+.equipment-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.equipment-card.activo {
+  border-left: 4px solid #28a745;
+}
+
+.equipment-card.mantenimiento {
+  border-left: 4px solid #ffc107;
+}
+
+.equipment-card.detenido {
+  border-left: 4px solid #dc3545;
+}
+
+.equipment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.equipment-header h4 {
+  margin: 0;
+  color: #1a365d;
+  font-size: 1.1rem;
+}
+
+.status-badge {
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status-badge.activo {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status-badge.mantenimiento {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status-badge.detenido {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.equipment-details p {
+  margin: 0.3rem 0;
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .procesos-miners {
+    padding: 1rem;
+  }
+  
+  .module-header h1 {
+    font-size: 2rem;
+  }
+  
+  .tabs {
+    flex-wrap: wrap;
+  }
+  
+  .tab {
+    padding: 0.8rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .equipment-grid {
+    grid-template-columns: 1fr;
+  }
+}
